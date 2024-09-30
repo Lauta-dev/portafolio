@@ -1,0 +1,177 @@
+/* Estilos globales */
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p {
+  text-wrap: balance;
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 12rem;
+}
+
+/* Estilos de <section /> */
+
+section {
+  margin: 17rem 0;
+}
+
+.principal {
+  margin: 0;
+  height: 100vh;
+}
+
+.principal, .about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.skiils {
+}
+
+.skiils > h3 {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Estilos de <li /> */
+
+li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-out;
+  border: 1px solid transparent;
+  padding: 1rem;
+  margin: 0;
+}
+
+
+li:hover {
+  border: 1px solid blue;
+  border-radius: 10px;
+  transition: all 0.3s ease-out;
+}
+
+li:hover p {
+  color: blue;
+}
+
+li > img {
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Estilos de botones del header */
+
+.principal > div {
+  color: red;
+  display: flex;
+  gap: 1rem;
+}
+
+.principal > div > a {
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+
+  padding: .5rem;
+  text-align: center;
+  display: flex;
+  transition: all 0.3s ease-out;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.principal > div > a:hover {
+  background: #f3f3f3;
+  transition: all 0.3s ease-out;
+}
+
+/* card */
+
+.projects > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.img-container {
+  border-radius: 10px;
+}
+
+.img-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.description {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textwithsvg {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0; /* Eliminar padding en pantallas pequeñas */
+  }
+
+  /* Otros posibles ajustes para móviles */
+
+  section {
+    padding: 1rem; /* Añadir un pequeño padding interno a las secciones para que el contenido no toque los bordes */
+  }
+
+  .principal > div {
+    flex-direction: column; /* Cambiar a una disposición en columna para que los enlaces no se vean comprimidos */
+    gap: 0.5rem; /* Reducir el espacio entre los enlaces */
+  }
+
+  .projects {
+    grid-template-columns: 1fr; /* Mostrar una sola columna en la vista móvil */
+  }
+
+  .card {
+    margin-bottom: 1.5rem; /* Añadir más espacio entre las tarjetas de proyectos */
+  }
+
+  .skiils ul {
+    grid-template-columns: 1fr 1fr; /* Mostrar solo dos ítems por fila en habilidades */
+  }
+}

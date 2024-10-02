@@ -1,10 +1,10 @@
 /* Estilos globales */
 * {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
 
-p {
   text-wrap: balance;
+  list-style: none;
+  text-decoration: none;
 }
 
 main {
@@ -31,9 +31,6 @@ section {
   text-align: center;
 }
 
-.skiils {
-}
-
 .skiils > h3 {
   display: flex;
   gap: 1rem;
@@ -42,29 +39,22 @@ section {
 /* Estilos de <li /> */
 
 li {
-  list-style: none;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease-out;
-  border: 1px solid transparent;
   padding: 1rem;
   margin: 0;
-}
-
-
-li:hover {
-  border: 1px solid blue;
-  border-radius: 10px;
-  transition: all 0.3s ease-out;
-}
-
-li:hover p {
-  color: blue;
+  border: .1rem solid;
+  border-radius: .5rem;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
 li > img {
+  width: 2rem;
+}
+
+li > p {
+  font-weight: bold;
 }
 
 ul {
@@ -84,7 +74,7 @@ ul {
   gap: 1rem;
 }
 
-.principal > div > a {
+.link {
   font-style: normal;
   text-decoration: none;
   color: black;
@@ -109,7 +99,7 @@ ul {
 .projects > div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  gap: 5rem;
 }
 
 .card {
@@ -125,6 +115,8 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+  border-radius: .5rem;
+  aspect-ratio: 16 / 9;
 }
 
 .project-info {
@@ -132,13 +124,46 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
+
 .description {
-  text-align: center;
   margin-bottom: 15px;
 }
+
 .button-container {
   display: flex;
-  justify-content: space-between;
+  gap: .5rem;
+}
+
+.gh-anchor {
+  border: 1px solid #000;
+  font-weight: bold;
+  transition: all 0.3s ease-out;
+}
+
+.gh-anchor:hover {
+  background: #f3f3f3;
+}
+
+.docker-anchor {
+  color: #0db7ed;
+  border: 1px solid;
+  transition: all 0.3s ease-out;
+  font-weight: bold;
+}
+
+.docker-anchor:hover {
+  background: #d0fcff;
+}
+
+.web-anchor {
+  color: #ef03ff;
+  border: 1px solid;
+  transition: all 0.3s ease-out;
+  font-weight: bold;
+}
+
+.web-anchor:hover {
+  background: #ffd0fd;
 }
 
 .textwithsvg {
@@ -146,6 +171,60 @@ ul {
   align-items: center;
   gap: 1rem;
 }
+
+/*  Tags  */
+
+[class$="-tag"] {
+  transition: all 0.2s ease-out;
+}
+
+.web-html-tag { color: #f26527; }
+.web-html-tag:hover { background: #fff5e8; }
+
+.web-css-tag { color: #32a9de; }
+.web-css-tag:hover { background: #e8edff; }
+
+.web-js-tag { color: #f7df1e; }
+.web-js-tag:hover { background: #ffffd7; }
+
+.web-react-tag { color: #61dafb; }
+.web-react-tag:hover { background: #e8faff; }
+
+.web-tw-tag { color: #1da1f2; }
+.web-tw-tag:hover { background: #e8eeff; }
+
+.web-astro-tag { color: #ff00ff; }
+.web-astro-tag:hover { background: #ffe8ff; }
+
+.back-nodejs-tag,
+.back-expressjs-tag,
+.back-nestjs-tag { color: #57a745; }
+
+.back-nodejs-tag:hover,
+.back-expressjs-tag:hover,
+.back-nestjs-tag:hover { background: #efffe8; }
+
+.tools-docker-tag { color: #0db7ed; }
+.tools-docker-tag:hover { background: #d0fcff; }
+
+.tools-git-tag { color: #f15233; }
+.tools-git-tag:hover { background: #fff5e8; }
+
+.tools-github-tag { color: #181717; }
+.tools-github-tag:hover { background: #e8edff; }
+
+.tools-typescript-tag { color: #007acc; }
+.tools-typescript-tag:hover { background: #d0fcff; }
+
+.tools-database-tag { color: #336791; }
+.tools-database-tag:hover { background: #e8edff; }
+
+.tools-linux-tag { color: #0db7ed; }
+.tools-linux-tag:hover { background: #d0fcff; }
+
+.tools-npm-tag { color: #cb3837; }
+.tools-npm-tag:hover { background: #ffd6d6; }
+
 
 @media (max-width: 768px) {
   main {

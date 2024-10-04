@@ -21,14 +21,9 @@ section {
 .principal {
   margin: 0;
   height: 100vh;
-}
-
-.principal, .about-me {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  text-align: center;
+  justify-content: center;
 }
 
 .skiils > h3 {
@@ -216,7 +211,7 @@ ul {
 .tools-typescript-tag { color: #007acc; }
 .tools-typescript-tag:hover { background: #d0fcff; }
 
-.tools-database-tag { color: #336791; }
+.tools-database-tag { color: #336791;
 .tools-database-tag:hover { background: #e8edff; }
 
 .tools-linux-tag { color: #0db7ed; }

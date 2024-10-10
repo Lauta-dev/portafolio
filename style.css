@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 main {
   margin: 0 auto;
   padding: 0 12rem;
@@ -71,9 +75,8 @@ ul {
 
 .link {
   font-style: normal;
+  color: #000;
   text-decoration: none;
-  color: black;
-
   padding: .5rem;
   text-align: center;
   display: flex;
@@ -84,7 +87,7 @@ ul {
   border-radius: 10px;
 }
 
-.principal > div > a:hover {
+.link:hover {
   background: #f3f3f3;
   transition: all 0.3s ease-out;
 }

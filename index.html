@@ -1,194 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- HTML Meta Tags -->
-    <title>Alonso Diaz Ruben Lautaro</title>
-    <meta name="description" content="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://portafolio-seven-gules.vercel.app/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Alonso Diaz Ruben Lautaro">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="assets/porfolio.png">
+  <!-- HTML Meta Tags -->
+  <title>Alonso Diaz Ruben Lautaro</title>
+  <meta name="description" content="">
 
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="portafolio-seven-gules.vercel.app">
-    <meta property="twitter:url" content="https://portafolio-seven-gules.vercel.app/">
-    <meta name="twitter:title" content="Alonso Diaz Ruben Lautaro">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="assets/porfolio.png">
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://portafolio-seven-gules.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alonso Diaz Ruben Lautaro">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="assets/porfolio.png">
 
-    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
-    
-    <link href="normalize.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="portafolio-seven-gules.vercel.app">
+  <meta property="twitter:url" content="https://portafolio-seven-gules.vercel.app/">
+  <meta name="twitter:title" content="Alonso Diaz Ruben Lautaro">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="assets/porfolio.png">
+
+  <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+  <link href="pico.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script type="module" src="script.js"></script>
+</head>
+
+<body>
 
 
-    <main>
-      <section class="principal">
-        <h1>Alonso Diaz Ruben Lautaro</h1>
+  <main class="container">
+    <section class="principal">
+      <h1>Alonso Diaz Ruben Lautaro</h1>
+
+      <div class="abount-me">
         <p>Soy Desarrollador Web <b>Backend</b> | <b>Frontend</b></p>
         <p>Vengo estudiando de manera autodidacta
-        desde los 15 años por un curso de Udemy sobre JavaScript.</p>
+          desde los 15 años por un curso de Udemy sobre JavaScript.</p>
 
         <p>Desde ese momento este mundo me parecio bastante interesante, hoy siguo
-        formandome con curso e haciendo proyectos y en un futuro ir a la Facultad.</p>
+          formandome con curso e haciendo proyectos y en un futuro ir a la Facultad.</p>
 
         <p>Mis hábilidades son en el ambito web, Back-end y un poco de Devops</p>
-        <div>
-          <a
-            href="https://github.com/lauta-dev"
-            class="link"
-            target="_blank"
 
-          >GitHub</a>
 
-          <a
-            href="https://linkedin.com/in/ruben-lautaro-alonso-diaz"
-            class="link"
-            target="_blank"
-          >LinkedIn</a>
+        <div class="btn-contact">
+          <a href="https://github.com/lauta-dev" class="link btn-contact-ln" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/ruben-lautaro-alonso-diaz" class="link btn-contact-ln"
+            target="_blank">LinkedIn</a>
         </div>
-      </section>
+      </div>
 
-      <section class="skiils">
-        <h2 class="textwithsvg">Habilidades <img src="assets/code.svg" alt=""></h2>
-        <h3>Front-end <img src="assets/app-window.svg" alt=""></h3>
-        <ul class="web-list"></ul>
 
-        <h3 class="textwithsvg">Back-End <img src="assets/server.svg" alt="server_svg" /></h3>
-        <ul class="back-list"></ul>
+    </section>
 
-        <h3 class="textwithsvg">Tools <img src="assets/tool.svg" alt="tool_svg" /></h3>
-        <ul class="tools-list"> </ul>
+    <section class="skiils">
+      <h2 class="textwithsvg">Habilidades <img src="assets/code.svg" alt=""></h2>
+      <h3>Front-end <img src="assets/app-window.svg" alt=""></h3>
+      <ul class="web-list"></ul>
 
-      </section>
+      <h3 class="textwithsvg">Back-End <img src="assets/server.svg" alt="server_svg" /></h3>
+      <ul class="back-list"></ul>
 
-      <section class="projects">
+      <h3 class="textwithsvg">Tools <img src="assets/tool.svg" alt="tool_svg" /></h3>
+      <ul class="tools-list"> </ul>
+
+    </section>
+
+    <section class="projects">
       <h2 class="textwithsvg">Proyectos <img src="assets/folder.svg" alt=""></h2>
-        <div>
-          <!-- CSV viewer -->
-          <div class="card">
-            <div class="img-container">
-              <img src="csv-viewer-screenshot.png" alt="">
-            </div>
-            <div class="project-info">
-              <h3 class="project-title">CSV viewer</h3>
-              <div>
-                <img src="assets/brand-react.svg" alt="">
-                <img src="assets/brand-tailwind.svg" alt="">
-              </div>
-            </div>
-            <hr>
-            <div class="description">
-              <p>Pequeña utilidad para ver los archivos .csv de manera fácil, rápida y intuitiva.</p>
-            </div>
-            <div class="button-container">
-              <a
-                class="web-anchor link"
-                target="_blank"
-                href="https://csv-viewer-eight.vercel.app">
-                <img src="assets/world-www.svg" alt="world-www svg">
-                Demo
-              </a>
-              <a
-                class="gh-anchor link"
-                target="_blank"
-                href="https://github.com/lauta-dev/db_viewer">
-                <img
-                  src="assets/brand-github.svg"
-                  alt="github svg" />
-                Código
-              </a>
+      <div>
+        <!-- CSV viewer -->
+        <div class="card">
+          <div class="img-container">
+            <img src="csv-viewer-screenshot.png" alt="">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">CSV viewer</h3>
+            <div>
+              <img src="assets/brand-react.svg" alt="">
+              <img src="assets/brand-tailwind.svg" alt="">
             </div>
           </div>
-
-          <!-- DB Viewer -->
-          <!-- TODO: Agregar la screenshot del proyecto -->
-          <div class="card">
-            <div class="img-container">
-              <img src="" alt="Image not found">
-            </div>
-            <div class="project-info">
-              <h3 class="project-title">DB Viewer</h3>
-              <div>
-                <img src="assets/brand-react.svg" alt="react svg">
-                <img src="assets/brand-tailwind.svg" alt="tailwind svg">
-                <img src="assets/brand-docker.svg" alt="docker svg">
-                <img src="assets/brand-typescript.svg" alt="typescript svg">
-                <img src="assets/database.svg" alt="database svg">
-              </div>
-            </div>
-            <hr>
-            <div class="description">
-              <p>Ve tus tablas y columnas de PostgreSQL desde la web.</p>
-            </div>
-            <div class="button-container">
-              <a
-                class="docker-anchor link" target="_blank" href="https://hub.docker.com/r/laut4/view_db">
-                <img
-                  src="assets/brand-docker.svg"
-                  alt="docker img">
-                Docker Hub
-              </a>
-              <a
-                class="gh-anchor link"
-                target="_blank"
-                href="https://github.com/lauta-dev/db_viewer">
-                <img
-                  src="assets/brand-github.svg"
-                  alt="github svg" />
-                Código
-              </a>
-            </div>
+          <hr>
+          <div class="description">
+            <p>Pequeña utilidad para ver los archivos .csv de manera fácil, rápida y intuitiva.</p>
           </div>
-
-          <div class="card">
-            <div class="img-container">
-              <img src="short_url_screenshpt.png" alt="Image not found">
-            </div>
-            <div class="project-info">
-              <h3 class="project-title">Acortar URL</h3>
-              <div>
-                <img src="assets/brand-nodejs.svg" alt="nodejs svg">
-                <img src="assets/database.svg" alt="database SQL svg">
-                <img src="assets/brand-javascript.svg" alt="javascript svg">
-              </div>
-            </div>
-            <hr>
-            <div class="description">
-              <b>Pequeña utilidad para acortar las largas URLs.</b>
-              <p>En el futuro añadire historial de URLs e inicio de sesión</p>
-            </div>
-            <div class="button-container">
-               <a
-                class="web-anchor link"
-                target="_blank"
-                href="">
-                <img src="assets/world-www.svg" alt="world-www svg">
-                Demo
-              </a>
-              <a
-                class="gh-anchor link"
-                target="_blank"
-                href="https://github.com/lauta-dev/short-url">
-                <img
-                  src="assets/brand-github.svg"
-                  alt="github svg" />
-                Código
-              </a>
-            </div>
+          <div class="button-container">
+            <a class="web-anchor link" target="_blank" href="https://csv-viewer-eight.vercel.app">
+              <img src="assets/world-www.svg" alt="world-www svg">
+              Demo
+            </a>
+            <a class="gh-anchor link" target="_blank" href="https://github.com/lauta-dev/db_viewer">
+              <img src="assets/brand-github.svg" alt="github svg" />
+              Código
+            </a>
           </div>
         </div>
-      </section>
-    </main>
-  </body>
+
+        <!-- DB Viewer -->
+        <!-- TODO: Agregar la screenshot del proyecto -->
+        <div class="card">
+          <div class="img-container">
+            <img src="" alt="Image not found">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">DB Viewer</h3>
+            <div>
+              <img src="assets/brand-react.svg" alt="react svg">
+              <img src="assets/brand-tailwind.svg" alt="tailwind svg">
+              <img src="assets/brand-docker.svg" alt="docker svg">
+              <img src="assets/brand-typescript.svg" alt="typescript svg">
+              <img src="assets/database.svg" alt="database svg">
+            </div>
+          </div>
+          <hr>
+          <div class="description">
+            <p>Ve tus tablas y columnas de PostgreSQL desde la web.</p>
+          </div>
+          <div class="button-container">
+            <a class="docker-anchor link" target="_blank" href="https://hub.docker.com/r/laut4/view_db">
+              <img src="assets/brand-docker.svg" alt="docker img">
+              Docker Hub
+            </a>
+            <a class="gh-anchor link" target="_blank" href="https://github.com/lauta-dev/db_viewer">
+              <img src="assets/brand-github.svg" alt="github svg" />
+              Código
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-container">
+            <img src="short_url_screenshpt.png" alt="Image not found">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Acortar URL</h3>
+            <div>
+              <img src="assets/brand-nodejs.svg" alt="nodejs svg">
+              <img src="assets/database.svg" alt="database SQL svg">
+              <img src="assets/brand-javascript.svg" alt="javascript svg">
+            </div>
+          </div>
+          <hr>
+          <div class="description">
+            <b>Pequeña utilidad para acortar las largas URLs.</b>
+            <p>En el futuro añadire historial de URLs e inicio de sesión</p>
+          </div>
+          <div class="button-container">
+            <a class="web-anchor link" target="_blank" href="">
+              <img src="assets/world-www.svg" alt="world-www svg">
+              Demo
+            </a>
+            <a class="gh-anchor link" target="_blank" href="https://github.com/lauta-dev/short-url">
+              <img src="assets/brand-github.svg" alt="github svg" />
+              Código
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>

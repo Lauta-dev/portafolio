@@ -7,19 +7,31 @@
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {}
+
 a {
   text-decoration: none;
-}
-
-main {
-  margin: 0 auto;
-  padding: 0 12rem;
 }
 
 /* Estilos de <section /> */
 
 section {
   margin: 17rem 0;
+}
+
+.abount-me {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #000000;
+  padding-left: 1rem;
+}
+
+.btn-contact {
+  display: flex;
 }
 
 .principal {
@@ -30,7 +42,7 @@ section {
   justify-content: center;
 }
 
-.skiils > h3 {
+.skiils>h3 {
   display: flex;
   gap: 1rem;
 }
@@ -39,35 +51,39 @@ section {
 
 li {
   display: flex;
-  padding: 1rem;
-  margin: 0;
-  border: .1rem solid;
-  border-radius: .5rem;
-  gap: 1rem;
   align-items: center;
   justify-content: center;
+  text-align: center;
+
+  padding: .5rem;
+  border: .1rem solid;
+  border-radius: .5rem;
+  gap: .5rem;
 }
 
-li > img {
+li>img {
   width: 2rem;
 }
 
-li > p {
+.web-list,
+.back-list,
+.tools-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.web-list>li>p,
+.back-list>li>p,
+.tools-list>li>p {
+  margin: 0;
+  padding: 0;
   font-weight: bold;
 }
 
-ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
-
-
 /* Estilos de botones del header */
 
-.principal > div {
+.principal>div {
   color: red;
   display: flex;
   gap: 1rem;
@@ -94,7 +110,7 @@ ul {
 
 /* card */
 
-.projects > div {
+.projects>div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 5rem;
@@ -105,22 +121,18 @@ ul {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .img-container {
   border-radius: 10px;
 }
 
-.img-container > img {
+.img-container>img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+  object-fit: cover;
+  /* Ajusta la imagen sin distorsionarla */
   border-radius: .5rem;
   aspect-ratio: 16 / 9;
-}
-
-.project-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .description {
@@ -176,79 +188,143 @@ ul {
   transition: all 0.2s ease-out;
 }
 
-.web-html-tag { color: #f26527; }
-.web-html-tag:hover { background: #fff5e8; }
+.web-html-tag {
+  color: #f26527;
+}
 
-.web-css-tag { color: #32a9de; }
-.web-css-tag:hover { background: #e8edff; }
+.web-html-tag:hover {
+  background: #fff5e8;
+}
 
-.web-js-tag { color: #f7df1e; }
-.web-js-tag:hover { background: #ffffd7; }
+.web-css-tag {
+  color: #32a9de;
+}
 
-.web-react-tag { color: #61dafb; }
-.web-react-tag:hover { background: #e8faff; }
+.web-css-tag:hover {
+  background: #e8edff;
+}
 
-.web-tw-tag { color: #1da1f2; }
-.web-tw-tag:hover { background: #e8eeff; }
+.web-js-tag {
+  color: #f7df1e;
+}
 
-.web-astro-tag { color: #ff00ff; }
-.web-astro-tag:hover { background: #ffe8ff; }
+.web-js-tag:hover {
+  background: #ffffd7;
+}
+
+.web-react-tag {
+  color: #61dafb;
+}
+
+.web-react-tag:hover {
+  background: #e8faff;
+}
+
+.web-tw-tag {
+  color: #1da1f2;
+}
+
+.web-tw-tag:hover {
+  background: #e8eeff;
+}
+
+.web-astro-tag {
+  color: #ff00ff;
+}
+
+.web-astro-tag:hover {
+  background: #ffe8ff;
+}
 
 .back-nodejs-tag,
 .back-expressjs-tag,
-.back-nestjs-tag { color: #57a745; }
+.back-nestjs-tag {
+  color: #57a745;
+}
 
 .back-nodejs-tag:hover,
 .back-expressjs-tag:hover,
-.back-nestjs-tag:hover { background: #efffe8; }
+.back-nestjs-tag:hover {
+  background: #efffe8;
+}
 
-.tools-docker-tag { color: #0db7ed; }
-.tools-docker-tag:hover { background: #d0fcff; }
+.tools-docker-tag {
+  color: #0db7ed;
+}
 
-.tools-git-tag { color: #f15233; }
-.tools-git-tag:hover { background: #fff5e8; }
+.tools-docker-tag:hover {
+  background: #d0fcff;
+}
 
-.tools-github-tag { color: #181717; }
-.tools-github-tag:hover { background: #e8edff; }
+.tools-git-tag {
+  color: #f15233;
+}
 
-.tools-typescript-tag { color: #007acc; }
-.tools-typescript-tag:hover { background: #d0fcff; }
+.tools-git-tag:hover {
+  background: #fff5e8;
+}
 
-.tools-database-tag { color: #336791;
-.tools-database-tag:hover { background: #e8edff; }
+.tools-github-tag {
+  color: #181717;
+}
 
-.tools-linux-tag { color: #0db7ed; }
-.tools-linux-tag:hover { background: #d0fcff; }
+.tools-github-tag:hover {
+  background: #e8edff;
+}
 
-.tools-npm-tag { color: #cb3837; }
-.tools-npm-tag:hover { background: #ffd6d6; }
+.tools-typescript-tag {
+  color: #007acc;
+}
+
+.tools-typescript-tag:hover {
+  background: #d0fcff;
+}
+
+
+.web-list>li,
+.back-list>li,
+.tools-list>li {}
+
+
+.tools-database-tag {
+  color: #336791;
+}
+
+.tools-database-tag:hover {
+  background: #e8edff;
+}
+
+.tools-linux-tag {
+  color: #0db7ed;
+}
+
+.tools-linux-tag:hover {
+  background: #d0fcff;
+}
+
+.tools-npm-tag {
+  color: #cb3837;
+}
+
+.tools-npm-tag:hover {
+  background: #ffd6d6;
+}
 
 
 @media (max-width: 768px) {
-  main {
-    padding: 0; /* Eliminar padding en pantallas pequeñas */
-  }
-
-  /* Otros posibles ajustes para móviles */
-
-  section {
-    padding: 1rem; /* Añadir un pequeño padding interno a las secciones para que el contenido no toque los bordes */
-  }
-
-  .principal > div {
-    flex-direction: column; /* Cambiar a una disposición en columna para que los enlaces no se vean comprimidos */
-    gap: 0.5rem; /* Reducir el espacio entre los enlaces */
-  }
-
-  .projects {
-    grid-template-columns: 1fr; /* Mostrar una sola columna en la vista móvil */
+  .principal {
+    margin-top: 5rem;
   }
 
   .card {
-    margin-bottom: 1.5rem; /* Añadir más espacio entre las tarjetas de proyectos */
+    margin-bottom: 1.5rem;
+    /* Añadir más espacio entre las tarjetas de proyectos */
   }
 
-  .skiils ul {
-    grid-template-columns: 1fr 1fr; /* Mostrar solo dos ítems por fila en habilidades */
+  .web-list,
+  .tools-list,
+  .back-list {
+    grid-template-columns: 1fr;
+    padding: 0;
   }
 }

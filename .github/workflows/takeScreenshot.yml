@@ -15,3 +15,6 @@ jobs:
         uses: karol-brejna-i/webpage-screenshot-action@v1
         with:
           url: https://google.com
+      
+      - name: ls
+        uses: ls

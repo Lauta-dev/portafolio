@@ -16,6 +16,10 @@ jobs:
         with:
           url: https://google.com
       
-      
       - name: Guardar captura
-        run: git status
+        run: |
+          git config --local user.name {{ secrets.GH_USERNAME }}
+          git config --local user.email {{ secrets.GH_MAIL }}
+          git add .
+          git commit -m "Agregar captura de pantalla"
+          git push

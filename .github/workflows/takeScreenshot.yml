@@ -22,4 +22,4 @@ jobs:
           git config --local user.email ${{ secrets.GH_MAIL }}
           git add .
           git commit -m "Agregar captura de pantalla"
-          git push
+          git push https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/Lauta-dev/portafolio.git

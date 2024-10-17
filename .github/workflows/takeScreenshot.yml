@@ -17,4 +17,4 @@ jobs:
           url: https://google.com
       
       - name: ls
-        uses: ls
+        run: ls

@@ -11,10 +11,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.1
 
-      - name: webpage-screenshot
-        uses: karol-brejna-i/webpage-screenshot-action@v1
-        with:
-          url: https://google.com
-      
       - name: ls
         run: ls

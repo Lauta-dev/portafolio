@@ -81,7 +81,10 @@ jobs:
     steps:
       - name: Clonar repo de recursos
         run: git clone https://github.com/Lauta-dev/resource.git .
-      
+
+      - name: Eliminar imagenes
+        run: rm -frv *
+
       - name: Descargar artefacto
         uses: actions/download-artifact@v3
         with:

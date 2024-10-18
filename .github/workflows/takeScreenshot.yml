@@ -15,6 +15,7 @@ jobs:
       - name: Generate Web site screenshot
         uses: karol-brejna-i/webpage-screenshot-action@v1
         with:
+          mode: page
           url: https://lauta-dev.github.io/portafolio/
       
 

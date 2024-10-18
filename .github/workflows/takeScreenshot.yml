@@ -23,15 +23,19 @@ jobs:
         run: ls
 
       - name: Set up Git
+        env:
+          TOKEN: ${{  secrets.ACCCESS_TOKEN }}
         run: |
           git config  user.name "${{ secrets.GH_USERNAME }}"
           git config  user.email "${{ secrets.GH_MAIL }}"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/Lauta-dev/resource.git
       
       - name: Create screenshot image
         run: |
           git add .
           git commit -m "Agregar captura de pantalla"
 
+      
       - name: Guardar captura
         run: |
-          git push 
+          git push origin main

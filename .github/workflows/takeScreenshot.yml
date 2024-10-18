@@ -58,7 +58,7 @@ jobs:
         run: mkdir opt
 
       - name: Optimizar imágenes
-        uses: calibre/image-actions@v1
+        uses: calibreapp/image-actions@1.1.0
         with:
           quality: 80  # Ajusta la calidad (opcional, por defecto es 80%)
           max-size: 100kb  # Tamaño máximo deseado para las imágenes

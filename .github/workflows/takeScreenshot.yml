@@ -9,19 +9,85 @@ jobs:
   screenshots:
     runs-on: ubuntu-latest
     steps:
-      - name: Clonar repo de recursos
-        run: git clone https://github.com/Lauta-dev/resource.git .
-      
-      - name: Generate Web site screenshot
+      - name: Generara captura de pantalla del porfolio
         uses: karol-brejna-i/webpage-screenshot-action@v1
         with:
           mode: page
           url: https://lauta-dev.github.io/portafolio/
           output: porfolio.png
+      
+      - name: Generar captura de pantalla de lauta-dev/csv-viewer
+        uses: karol-brejna-i/webpage-screenshot-action@v1
+        with:
+          mode: page
+          url: https://csv-viewer-eight.vercel.app/
+          output: csv-viewer.png
 
-      - name: ls
-        run: ls
+      - name: Generar captura de pantalla de lauta-dev/short-url
+        uses: karol-brejna-i/webpage-screenshot-action@v1
+        with:
+          mode: page
+          url: https://short-url-clien.vercel.app/
+          output: short-url.png
 
+      - name: Crear contenedor
+        run: mkdir images
+
+      - name: mover a contenedor
+        run: mv *.png images
+
+      - name: Subir artefacto
+        uses: actions/upload-artifact@v3
+        with:
+          name: todas-las-imagenes
+          path: images/
+
+  optimize-images:
+    runs-on: ubuntu-latest
+    needs: [screenshots]
+    steps:
+      - name: Descargar artefacto
+        uses: actions/download-artifact@v3
+        with:
+          name: todas-las-imagenes
+
+      - name: mover imagenes al directorio
+        run: mv images/* .
+
+      - name: Crear contener para webp
+        run: mkdir opt
+
+      - name: Optimizar imágenes
+        uses: calibre/image-actions@v1
+        with:
+          quality: 80  # Ajusta la calidad (opcional, por defecto es 80%)
+          max-size: 100kb  # Tamaño máximo deseado para las imágenes
+          format: webp  # Formatos que serán optimizados
+
+      - name: Crear contener e mover las imagenes optimizadas 
+        run: mv *.webp opt/
+
+      - name: Subir artefacto
+        uses: actions/upload-artifact@v3
+        with:
+          name: todas-las-imagenes-opt
+          path: opt/
+
+  push-images:
+    runs-on: ubuntu-latest
+    needs: [optimize-images]
+    steps:
+      - name: Descargar artefacto
+        uses: actions/download-artifact@v3
+        with:
+          name: todas-las-imagenes-opt
+
+      - name: ls opts
+        run: ls opt
+
+      - name: Clonar repo de recursos
+        run: git clone https://github.com/Lauta-dev/resource.git .
+      
       - name: Set up Git
         run: |
           git config  user.name "${{ secrets.GH_USERNAME }}"
@@ -32,7 +98,6 @@ jobs:
         run: |
           git add .
           git commit -m "Agregar captura de pantalla"
-
       
       - name: Guardar captura
         run: |

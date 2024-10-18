@@ -12,12 +12,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.1
 
+      - name: Clonar repo de recursos
+        run: |
+          git clone https://github.com/Lauta-dev/resource.git
+      
       - name: Generate Web site screenshot
         uses: karol-brejna-i/webpage-screenshot-action@v1
         with:
           mode: page
           url: https://lauta-dev.github.io/portafolio/
-      
+          output: resource/screenshot.png
 
       - name: Set up Git
         run: |

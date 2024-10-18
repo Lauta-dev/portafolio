@@ -10,36 +10,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clonar repo de recursos
-        run: |
-          git clone https://github.com/Lauta-dev/resource.git
+        run: git clone https://github.com/Lauta-dev/resource.git
       
-      - name: pwd
-        run: pwd
-
-      - name: cambiar al proyecto
-        run: |
-          cd resource
-      
-      - name: pwd2
-        run: pwd
-
       - name: Generate Web site screenshot
         uses: karol-brejna-i/webpage-screenshot-action@v1
         with:
           mode: page
           url: https://lauta-dev.github.io/portafolio/
-          output: resource/screenshot.png
+          output: resource/porfolio.png
+
+
+      - name: ls
+        run: ls
 
       - name: Set up Git
+        working-directory: ./resource
         run: |
           git config  user.name "${{ secrets.GH_USERNAME }}"
           git config  user.email "${{ secrets.GH_MAIL }}"
       
       - name: Create screenshot image
+        working-directory: ./resource
         run: |
           git add .
           git commit -m "Agregar captura de pantalla"
 
       - name: Guardar captura
+        working-directory: ./resource
         run: |
           git push 

@@ -46,34 +46,34 @@ jobs:
     runs-on: ubuntu-latest
     needs: [screenshots]
     steps:
+      - name: instalando ImageMagick
+        run: sudo apt-get install -y imagemagick
+
       - name: Descargar artefacto
         uses: actions/download-artifact@v3
         with:
           name: todas-las-imagenes
 
-      - name: ls
-        run: ls
+      - name: Convertir de png a webp
+        run: |
+          for img in *.png; do
+            magick "$img" "${img%.png}.webp"
+            echo "$img"
+          done
 
       - name: Crear contener para webp
-        run: mkdir opt
-
-      - name: Optimizar imágenes
-        uses: calibreapp/image-actions@1.1.0
-        with:
-          quality: 80  # Ajusta la calidad (opcional, por defecto es 80%)
-          max-size: 100kb  # Tamaño máximo deseado para las imágenes
-          format: webp  # Formatos que serán optimizados
+        run: mkdir webp
 
       - name: ls
         run: ls
       - name: Crear contener e mover las imagenes optimizadas 
-        run: mv *.webp opt/
+        run: mv *.webp webp/
 
       - name: Subir artefacto
         uses: actions/upload-artifact@v3
         with:
-          name: todas-las-imagenes-opt
-          path: opt/
+          name: todas-las-imagenes-webp
+          path: webp/
 
   push-images:
     runs-on: ubuntu-latest
@@ -82,10 +82,10 @@ jobs:
       - name: Descargar artefacto
         uses: actions/download-artifact@v3
         with:
-          name: todas-las-imagenes-opt
+          name: todas-las-imagenes-webp
 
-      - name: ls opts
-        run: ls opt
+      - name: ls webp
+        run: ls 
 
       - name: Clonar repo de recursos
         run: git clone https://github.com/Lauta-dev/resource.git .

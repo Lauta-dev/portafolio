@@ -51,6 +51,9 @@ jobs:
         with:
           name: todas-las-imagenes
 
+      - name: ls
+        run: ls
+
       - name: mover imagenes al directorio
         run: mv images/* .
 

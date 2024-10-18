@@ -54,9 +54,6 @@ jobs:
       - name: ls
         run: ls
 
-      - name: mover imagenes al directorio
-        run: mv images/* .
-
       - name: Crear contener para webp
         run: mkdir opt
 
@@ -67,6 +64,8 @@ jobs:
           max-size: 100kb  # Tamaño máximo deseado para las imágenes
           format: webp  # Formatos que serán optimizados
 
+      - name: ls
+        run: ls
       - name: Crear contener e mover las imagenes optimizadas 
         run: mv *.webp opt/
 

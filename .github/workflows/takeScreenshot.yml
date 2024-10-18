@@ -9,11 +9,13 @@ jobs:
   screenshots:
     runs-on: ubuntu-latest
     steps:
-
       - name: Clonar repo de recursos
         run: |
           git clone https://github.com/Lauta-dev/resource.git
       
+      - name: cambiar al proyecto
+        run: cd resource
+
       - name: Generate Web site screenshot
         uses: karol-brejna-i/webpage-screenshot-action@v1
         with:

@@ -18,8 +18,8 @@ jobs:
       
       - name: Guardar captura
         run: |
-          git config --local user.name ${{ secrets.GH_USERNAME }}
-          git config --local user.email ${{ secrets.GH_MAIL }}
+          git config  user.name "${{ secrets.GH_USERNAME }}"
+          git config  user.email "${{ secrets.GH_MAIL }}"
           git add .
           git commit -m "Agregar captura de pantalla"
           git push

@@ -16,12 +16,19 @@ jobs:
         with:
           url: https://google.com
       
-      - name: Guardar captura
-      - env: 
-          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Set up Git
         run: |
           git config  user.name "${{ secrets.GH_USERNAME }}"
           git config  user.email "${{ secrets.GH_MAIL }}"
+      
+      - name: Create screenshot image
+        run: |
           git add .
           git commit -m "Agregar captura de pantalla"
+
+      - name: Guardar captura
+        env:
+          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: |
           git push https://Lauta-dev:${GH_TOKEN}@github.com/Lauta-dev/portafolio.git main

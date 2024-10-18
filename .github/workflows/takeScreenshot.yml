@@ -28,7 +28,5 @@ jobs:
           git commit -m "Agregar captura de pantalla"
 
       - name: Guardar captura
-        env:
-          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
-          git push https://Lauta-dev:${GH_TOKEN}@github.com/Lauta-dev/portafolio.git main
+          git push 

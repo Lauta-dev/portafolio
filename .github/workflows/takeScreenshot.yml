@@ -80,7 +80,7 @@ jobs:
     needs: [optimize-images]
     steps:
       - name: Clonar repo de recursos
-        run: git clone https://github.com/Lauta-dev/resource.git
+        run: git clone https://github.com/Lauta-dev/resource.git .
       
       - name: Descargar artefacto
         uses: actions/download-artifact@v3

@@ -1,8 +1,9 @@
 name: Take screenshot
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types:
+      - completed
 
 jobs:
   screenshots:
@@ -11,10 +12,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.1
 
-      - name: webpage-screenshot
+      - name: Generate Web site screenshot
         uses: karol-brejna-i/webpage-screenshot-action@v1
         with:
-          url: https://google.com
+          url: https://lauta-dev.github.io/portafolio/
       
 
       - name: Set up Git

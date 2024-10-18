@@ -13,14 +13,15 @@ jobs:
         run: |
           git clone https://github.com/Lauta-dev/resource.git
       
-      - name: ls
-        run: ls
+      - name: pwd
+        run: pwd
 
       - name: cambiar al proyecto
-        run: cd resource
+        run: |
+          cd resource
       
-      - name: ls2
-        run: ls
+      - name: pwd2
+        run: pwd
 
       - name: Generate Web site screenshot
         uses: karol-brejna-i/webpage-screenshot-action@v1

@@ -79,6 +79,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [optimize-images]
     steps:
+      - name: Clonar repo de recursos
+        run: git clone https://github.com/Lauta-dev/resource.git
+      
       - name: Descargar artefacto
         uses: actions/download-artifact@v3
         with:
@@ -86,14 +89,11 @@ jobs:
 
       - name: ls webp
         run: ls 
-
-      - name: Clonar repo de recursos
-        run: git clone https://github.com/Lauta-dev/resource.git .
       
       - name: Set up Git
         run: |
-          git config  user.name "${{ secrets.GH_USERNAME }}"
-          git config  user.email "${{ secrets.GH_MAIL }}"
+          git config user.name "${{ secrets.GH_USERNAME }}"
+          git config user.email "${{ secrets.GH_MAIL }}"
           git remote set-url origin https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/Lauta-dev/resource.git
       
       - name: Create screenshot image

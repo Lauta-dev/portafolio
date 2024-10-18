@@ -57,7 +57,7 @@ jobs:
       - name: Convertir de png a webp
         run: |
           for img in *.png; do
-            magick "$img" "${img%.png}.webp"
+            convert "$img" "${img%.png}.webp"
             echo "$img"
           done
 

@@ -10,25 +10,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Generara captura de pantalla del porfolio
-        uses: karol-brejna-i/webpage-screenshot-action@v1
+        uses: swinton/screenshot-website@v1.0.2
         with:
-          mode: page
-          url: https://lauta-dev.github.io/portafolio/
-          output: porfolio.png
+          
+          source: https://lauta-dev.github.io/portafolio/
+          destination: porfolio.png
       
       - name: Generar captura de pantalla de lauta-dev/csv-viewer
-        uses: karol-brejna-i/webpage-screenshot-action@v1
+        uses: swinton/screenshot-website@v1.0.2
         with:
-          mode: page
-          url: https://csv-viewer-eight.vercel.app/
-          output: csv-viewer.png
+          
+          source: https://csv-viewer-eight.vercel.app/
+          destination: csv-viewer.png
 
       - name: Generar captura de pantalla de lauta-dev/short-url
-        uses: karol-brejna-i/webpage-screenshot-action@v1
+        uses: swinton/screenshot-website@v1.0.2
         with:
-          mode: page
-          url: https://short-url-clien.vercel.app/
-          output: short-url.png
+          
+          source: https://short-url-clien.vercel.app/
+          destination: short-url.png
 
       - name: Crear contenedor
         run: mkdir images

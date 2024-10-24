@@ -9,6 +9,9 @@ jobs:
   screenshots:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
       - name: Generar imgenes
         uses: lauta-dev/hello-world-docker-action@v53
         with:

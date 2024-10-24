@@ -9,45 +9,23 @@ jobs:
   screenshots:
     runs-on: ubuntu-latest
     steps:
-      - name: Generara captura de pantalla del porfolio
-        uses: swinton/screenshot-website@v1.0.2
+      - name: Generar imgenes
+        uses: lauta-dev/hello-world-docker-action@v53
         with:
-          
-          source: https://lauta-dev.github.io/portafolio/
-          destination: porfolio.png
-      
-      - name: Generar captura de pantalla de lauta-dev/csv-viewer
-        uses: swinton/screenshot-website@v1.0.2
-        with:
-          
-          source: https://csv-viewer-eight.vercel.app/
-          destination: csv-viewer.png
-
-      - name: Generar captura de pantalla de lauta-dev/short-url
-        uses: swinton/screenshot-website@v1.0.2
-        with:
-          
-          source: https://short-url-clien.vercel.app/
-          destination: short-url.png
-
-      - name: Crear contenedor
-        run: mkdir images
-
-      - name: mover a contenedor
-        run: mv *.png images
+          pages_file: pages.yml
 
       - name: Subir artefacto
         uses: actions/upload-artifact@v3
         with:
           name: todas-las-imagenes
-          path: images/
+          path: screenshots/
 
   optimize-images:
     runs-on: ubuntu-latest
     needs: [screenshots]
     steps:
       - name: instalando ImageMagick
-        run: sudo apt-get install -y imagemagick
+        run: sudo apt-get install -y webp
 
       - name: Descargar artefacto
         uses: actions/download-artifact@v3
@@ -57,8 +35,9 @@ jobs:
       - name: Convertir de png a webp
         run: |
           for img in *.png; do
-            convert "$img" "${img%.png}.webp"
-            echo "$img"
+            remove_ext=$(echo $img | sed "s/.png/.webp/")
+            echo "$img to $remove_ext"
+            cwebp -q 50 "$img" -o "$remove_ext"
           done
 
       - name: Crear contener para webp

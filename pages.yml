@@ -1,0 +1,5 @@
+pages:
+  - url: https://portafolio-seven-gules.vercel.app/
+    name: portafolio
+  - url: https://csv-viewer-eight.vercel.app/
+    name: csv-viewer

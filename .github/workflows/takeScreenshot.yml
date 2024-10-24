@@ -12,8 +12,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.2
 
+      - name: ls
+        run: ls /usr/bin | grep chro
+
       - name: Generar imgenes
-        uses: lauta-dev/website-screenshot-capture-action@v1.0.9
+        uses: lauta-dev/website-screenshot-capture-action@v1.1.1
         with:
           pages_file: pages.yml
 

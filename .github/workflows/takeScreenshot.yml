@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4.2.2
 
       - name: Generar imgenes
-        uses: lauta-dev/website-screenshot-capture-action@v1.0.5
+        uses: lauta-dev/website-screenshot-capture-action@v1.0.6
         with:
           pages_file: pages.yml
 

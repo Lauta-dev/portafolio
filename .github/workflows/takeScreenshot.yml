@@ -34,7 +34,7 @@ jobs:
       - name: Descargar artefacto
         uses: actions/download-artifact@v3
         with:
-          name: todas-las-imagenes-webp
+          name: todas-las-imagenes
 
       - name: Set up Git
         run: |

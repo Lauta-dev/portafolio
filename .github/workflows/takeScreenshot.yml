@@ -14,7 +14,7 @@ jobs:
 
 
       - name: Generar imgenes
-        uses: lauta-dev/website-screenshot-capture-action@v1.1.1
+        uses: lauta-dev/website-screenshot-capture-action@main
         with:
           pages_file: pages.yml
 
@@ -39,16 +39,12 @@ jobs:
       - name: Convertir de png a webp
         run: |
           for img in *.png; do
-            remove_ext=$(echo $img | sed "s/.png/.webp/")
-            echo "$img to $remove_ext"
-            cwebp -q 50 "$img" -o "$remove_ext"
+            cwebp "$img" -o "$remove_ext"
           done
 
       - name: Crear contener para webp
         run: mkdir webp
 
-      - name: ls
-        run: ls
       - name: Crear contener e mover las imagenes optimizadas 
         run: mv *.webp webp/
 
@@ -68,11 +64,8 @@ jobs:
       - name: Descargar artefacto
         uses: actions/download-artifact@v3
         with:
-          name: todas-las-imagenes
+          name: todas-las-imagenes-webp
 
-      - name: ls webp
-        run: ls 
-      
       - name: Set up Git
         run: |
           git config user.name "${{ secrets.GH_USERNAME }}"

@@ -5,3 +5,5 @@ pages:
     name: csv-viewer
   - url: https://game-api-nestjs-9zti.vercel.app/
     name: game-store
+  - url: https://short-url-clien.vercel.app/
+    name: short-url

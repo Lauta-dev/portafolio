@@ -17,12 +17,15 @@ jobs:
         uses: lauta-dev/website-screenshot-capture-action@main
         with:
           pages_file: pages.yml
+          type: webp
+          quality: 75
+          output: dir
 
       - name: Subir artefacto
         uses: actions/upload-artifact@v3
         with:
           name: todas-las-imagenes
-          path: screenshots/
+          path: dir/
 
   push-images:
     runs-on: ubuntu-latest

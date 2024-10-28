@@ -85,7 +85,7 @@ li>img {
 
 .projects>div {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
   gap: 5rem;
 }
 
@@ -137,6 +137,13 @@ li>img {
   .principal {
     margin-top: 5rem;
   }
+
+  .projects>div {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    gap: 5rem;
+  }
+
 
   .card {
     margin-bottom: 1.5rem;

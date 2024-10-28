@@ -7,3 +7,6 @@ pages:
     name: game-store
   - url: https://short-url-clien.vercel.app/
     name: short-url
+  - url: https://game-api-nestjs.vercel.app/
+    name: game-store-api
+

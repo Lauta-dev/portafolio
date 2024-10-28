@@ -1,5 +1,7 @@
 pages:
-  - url: https://portafolio-seven-gules.vercel.app/
+  - url: https://lauta-dev.github.io/portafolio/
     name: portafolio
   - url: https://csv-viewer-eight.vercel.app/
     name: csv-viewer
+  - url: https://game-api-nestjs-9zti.vercel.app/
+    name: game-store

@@ -14,7 +14,7 @@ jobs:
 
 
       - name: Generar imgenes
-        uses: lauta-dev/website-screenshot-capture-action@main
+        uses: lauta-dev/website-screenshot-capture-action@prettyJson
         with:
           pages_file: pages.yml
           type: webp

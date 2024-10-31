@@ -16,10 +16,10 @@ jobs:
       - name: Generar imgenes
         uses: lauta-dev/website-screenshot-capture-action@prettyJson
         with:
-          pages_file: pages.yml
+          ulrs_input_file: pages.yml
           type: webp
           quality: 75
-          output: dir
+          output_dir: dir
 
       - name: Subir artefacto
         uses: actions/upload-artifact@v3

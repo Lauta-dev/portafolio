@@ -9,4 +9,6 @@ pages:
     name: short-url
   - url: https://game-api-nestjs.vercel.app/
     name: game-store-api
+  - url: https://github.com/marketplace/actions/website-screenshot-capture
+    name: screenshot-capture
 

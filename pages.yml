@@ -11,4 +11,4 @@ pages:
     name: game-store-api
   - url: https://github.com/marketplace/actions/website-screenshot-capture
     name: screenshot-capture
-
+    script: actionScript.js
